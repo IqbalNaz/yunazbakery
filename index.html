@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Important for mobile responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>YUNAZ BAKERY</title>
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet"
+          href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- jQuery Mobile -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .ui-content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .welcome h2 {
+            color: #b33;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 12px;
+            background-color: white;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin-top: 12px;
+            color: #b33;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-list img {
+            width: 100px !important;
+            height: 100px !important;
+            object-fit: cover;
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            color: #b33;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+
+        .footer-text {
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div data-role="page" id="home">
+
+    <!-- HEADER -->
+    <div data-role="header" data-theme="b">
+        <h1>YUNAZ BAKERY</h1>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <div data-role="navbar">
+        <ul>
+            <li>
+                <a href="#home"
+                   class="ui-btn-active ui-state-persist">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#products">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact Us
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div role="main" class="ui-content">
+
+        <div class="welcome">
+
+            <h2>Welcome to YUNAZ BAKERY!</h2>
+
+            <p>
+                We offer premium coffee, delicious cakes
+                and freshly baked treats.
+            </p>
+
+        </div>
+
+
+        <h2>Featured Menu</h2>
+
+
+        <div class="card-grid">
+
+            <div class="card">
+
+                <img src="images/coffee.jpg"
+                     alt="Coffee Drink">
+
+                <h3>Coffee Drink</h3>
+
+                <p>
+                    Freshly brewed coffee with a rich aroma
+                    and smooth, comforting taste.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/matcha.jpg"
+                     alt="Matcha Strawberry">
+
+                <h3>Matcha Strawberry</h3>
+
+                <p>
+                    Creamy matcha blended with sweet strawberry
+                    for a refreshing and balanced flavour.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/tiramisu.jpg"
+                     alt="Tiramisu Cake">
+
+                <h3>Tiramisu Cake</h3>
+
+                <p>
+                    A soft coffee-flavoured cake layered with
+                    creamy mascarpone and a light dusting of cocoa.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/cookies.jpg"
+                     alt="Soft Cookies">
+
+                <h3>Soft Cookies</h3>
+
+                <p>
+                    Soft and chewy cookies with a sweet,
+                    buttery taste and deliciously tender texture.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-theme="b">
+
+        <h4 class="footer-text">
+            &copy; 2026 YUNAZ BAKERY
+        </h4>
+
+    </div>
+
+</div>
+
+<div data-role="page" id="products">
+
+    <!-- HEADER -->
+    <div data-role="header" data-theme="b">
+
+        <a href="#home"
+           data-icon="home"
+           data-iconpos="notext">
+            Home
+        </a>
+
+        <h1>Our Products</h1>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+    <div data-role="navbar">
+
+        <ul>
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#products"
+                   class="ui-btn-active ui-state-persist">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact Us
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- CONTENT -->
+    <div role="main" class="ui-content">
+
+        <h2>Our Menu</h2>
+
+        <ul data-role="listview"
+            data-inset="true"
+            class="product-list">
+
+
+            <!-- COFFEE -->
+            <li>
+
+                <img src="images/coffee.jpg"
+                     alt="Coffee Drink">
+
+                <h2>Coffee Drink</h2>
+
+                <p>
+                    Freshly brewed coffee with a rich aroma
+                    and smooth, comforting taste.
+                </p>
+
+            </li>
+
+
+            <!-- MATCHA -->
+            <li>
+
+                <img src="images/matcha.jpg"
+                     alt="Matcha Strawberry">
+
+                <h2>Matcha Strawberry</h2>
+
+                <p>
+                    Creamy matcha blended with sweet strawberry
+                    for a refreshing and balanced flavour.
+                </p>
+
+            </li>
+
+
+            <!-- TIRAMISU -->
+            <li>
+
+                <img src="images/tiramisu.jpg"
+                     alt="Tiramisu Cake">
+
+                <h2>Tiramisu Cake</h2>
+
+                <p>
+                    A soft coffee-flavoured cake layered with
+                    creamy mascarpone and a light dusting of cocoa.
+                </p>
+
+            </li>
+
+
+            <!-- COOKIES -->
+            <li>
+
+                <img src="images/cookies.jpg"
+                     alt="Soft Cookies">
+
+                <h2>Soft Cookies</h2>
+
+                <p>
+                    Soft and chewy cookies with a sweet,
+                    buttery taste and deliciously tender texture.
+                </p>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <div data-role="footer" data-theme="b">
+
+        <h4 class="footer-text">
+            &copy; 2026 YUNAZ BAKERY
+        </h4>
+
+    </div>
+
+</div>
+
+<div data-role="page" id="contact">
+
+    <!-- HEADER -->
+    <div data-role="header" data-theme="b">
+
+        <a href="#home"
+           data-icon="home"
+           data-iconpos="notext">
+            Home
+        </a>
+
+        <h1>Contact Us</h1>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+    <div data-role="navbar">
+
+        <ul>
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#products">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact"
+                   class="ui-btn-active ui-state-persist">
+                    Contact Us
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- CONTENT -->
+    <div role="main" class="ui-content">
+
+        <div class="contact-container">
+
+            <form id="contactForm">
+
+                <h2>Send Us a Message</h2>
+
+
+                <!-- NAME -->
+                <label for="name">
+                    Full Name:
+                </label>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       required>
+
+
+                <!-- EMAIL -->
+                <label for="email">
+                    Email:
+                </label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+
+                <!-- PHONE -->
+                <label for="phone">
+                    Phone Number:
+                </label>
+
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter your phone number">
+
+
+                <!-- SUBJECT -->
+                <label for="subject">
+                    Subject:
+                </label>
+
+                <input type="text"
+                       id="subject"
+                       name="subject"
+                       placeholder="Enter subject"
+                       required>
+
+
+                <!-- MESSAGE -->
+                <label for="message">
+                    Message:
+                </label>
+
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Write your message here..."
+                          required></textarea>
+
+                <!-- SEND -->
+                <button type="submit"
+                        data-theme="b">
+                    Send Message
+                </button>
+
+                <button type="reset"data-theme="a">
+                    Clear
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-theme="b">
+
+        <h4 class="footer-text">
+            2026 YUNAZ BAKERY
+        </h4>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    $(document).on("submit", "#contactForm", function(event) {
+
+        event.preventDefault();
+
+        var customerName = $("#name").val();
+
+        alert(
+            "Thank you, " +
+            customerName +
+            "! Your message has been sent successfully."
+        );
+
+        this.reset();
+
+    });
+
+</script>
+
+
+</body>
+</html>
